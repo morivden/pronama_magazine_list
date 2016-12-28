@@ -1,0 +1,58 @@
+<%= form_for @magazine do |f_mag| %>
+    <p>
+        <%= f_mag.label "タイトル" %><br>
+        <%= f_mag.text_field :title %>
+        <% if @magazine.errors.any? %>
+            <%= @magazine.errors.messages[:title][0] %>
+        <% end %>
+    </p>
+    <p>
+        <%= f_mag.label "原作" %><br>
+        <%= f_mag.text_field :origin %>
+        <% if @magazine.errors.any? %>
+            <%= @magazine.errors.messages[:origin][0] %>
+        <% end %>
+    </p>
+    <p>
+        <%= f_mag.label "作者" %><br>
+        <%= f_mag.text_field :author %>
+        <% if @magazine.errors.any? %>
+            <%= @magazine.errors.messages[:author][0] %>
+        <% end %>
+    </p>
+    <p>
+        <%= f_mag.label "サークル" %><br>
+        <%= f_mag.text_field :circle %>
+        <% if @magazine.errors.any? %>
+            <%= @magazine.errors.messages[:circle][0] %>
+        <% end %>
+    </p>
+    <p>
+        <%= f_mag.label "対象年齢" %><br>
+        <%= f_mag.text_field :qualify %>
+        <% if @magazine.errors.any? %>
+            <%= @magazine.errors.messages[:qualify][0] %>
+        <% end %>
+    </p>
+    <p>
+        <%= f_mag.label "発行日" %><br>
+        <%= f_mag.text_field :publication %>
+        <% if @magazine.errors.any? %>
+            <%= @magazine.errors.messages[:publication][0] %>
+        <% end %>
+    </p>
+    <p>
+        <%= f_mag.label "印刷所" %><br>
+        <%= f_mag.text_field :printed %>
+        <% if @magazine.errors.any? %>
+            <%= @magazine.errors.messages[:printed][0] %>
+        <% end %>
+    </p>
+    <p>
+        <%= f_mag.label "その他情報" %><br>
+        <%= f_mag.text_field :another_info %>
+    </p>
+
+    <p><%= f_mag.submit %></p>
+
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  origin: MyString
+  author: MyString
+  circle: MyString
+  qualify: MyString
+  publication: MyString
+  printed: MyString
+  another_info: MyString
+
+two:
+  title: MyString
+  origin: MyString
+  author: MyString
+  circle: MyString
+  qualify: MyString
+  publication: MyString
+  printed: MyString
+  another_info: MyString

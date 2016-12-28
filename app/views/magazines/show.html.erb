@@ -1,0 +1,19 @@
+<h1><%= @magazine.title %></h1>
+
+<!-- 薄い本情報の表示 -->
+<ul>
+    <li>原作 : <%= @magazine.origin %></li><br>
+    <li>作者 : <%= @magazine.author %></li><br>
+    <li>サークル : <%= @magazine.circle %></li><br>
+    <li>対象年齢 : <%= @magazine.qualify %></li><br>
+    <li>発行日 : <%= @magazine.publication %></li><br>
+    <li>印刷所 : <%= @magazine.printed %></li><br>
+    <li>その他情報 : <%= @magazine.another_info %></li><br>
+</ul>
+
+<h4><%= link_to "薄い本情報の編集", edit_magazine_path %></h4>
+
+<h4><%= link_to "薄い本を削除する", magazine_path(@magazine.id), method: :delete, data: {confirm: "本当に削除しますか?"} %></h4>
+
+<!-- 一覧へのリンク -->
+<h4><%= link_to "一覧へ戻る", magazines_path %></h4>

@@ -1,0 +1,11 @@
+<h1>薄い本一覧</h1>
+
+<ul>
+    <% @magazines.each do |magazine| %>
+        <h3><%= link_to magazine.title, magazine_path(magazine.id) %></h3>
+    <% end %>
+</ul>
+
+<h4><%= link_to "薄い本をリストに追加", new_magazine_path %></h4>
+
+<h4><%= link_to "タイトルに戻る", root_path %></h4>
