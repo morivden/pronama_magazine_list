@@ -28,14 +28,14 @@
         <% end %>
     </p>
     <p>
-        <%= f_mag.label "対象年齢" %><br>
+        <%= f_mag.label "対象年齢" %>(R-18 or ALL)<br>
         <%= f_mag.text_field :qualify %>
         <% if @magazine.errors.any? %>
             <%= @magazine.errors.messages[:qualify][0] %>
         <% end %>
     </p>
     <p>
-        <%= f_mag.label "発行日" %><br>
+        <%= f_mag.label "発行日" %>(0000.00.00)<br>
         <%= f_mag.text_field :publication %>
         <% if @magazine.errors.any? %>
             <%= @magazine.errors.messages[:publication][0] %>

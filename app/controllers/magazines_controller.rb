@@ -46,6 +46,10 @@ class MagazinesController < ApplicationController
         redirect_to magazines_path
     end
 
+    # 検索
+    def search
+    end
+
     private
 
     def magazine_params
