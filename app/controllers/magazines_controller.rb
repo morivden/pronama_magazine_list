@@ -5,7 +5,9 @@ class MagazinesController < ApplicationController
     end
 
     def index
-        @magazines = Magazine.all
+        # @magazines = Magazine.all
+        @search = Magazine.search(params[:q])
+        @magazines = @search.result(distinct: true)
     end
 
     def show
@@ -44,10 +46,6 @@ class MagazinesController < ApplicationController
     def destroy
         @magazine.destroy
         redirect_to magazines_path
-    end
-
-    # 検索
-    def search
     end
 
     private
