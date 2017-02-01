@@ -50,7 +50,7 @@
 
     <ul>
         <% @magazines.each do |magazine| %>
-            <h2><%= link_to magazine.title, magazine_path(magazine.id) %></h2>
+            <h3><%= link_to magazine.title, magazine_path(magazine.id) %></h3>
         <% end %>
     </ul>
 <% end %>
