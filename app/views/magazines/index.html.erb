@@ -10,47 +10,47 @@
 
 <!-- 検索フォーム -->
 <%= search_form_for @search do |f| %>
-    <%= f.label :title_cont, "タイトル" %>
-    <%= f.search_field :title_cont %>
+  <%= f.label :title_cont, "タイトル" %>
+  <%= f.search_field :title_cont %>
 
-    <%= f.label :origin_eq, "原作" %>
-    <%= f.search_field :origin_eq %>
+  <%= f.label :origin_eq, "原作" %>
+  <%= f.search_field :origin_eq %>
 
-    <%= f.label :author_eq, "著者" %>
-    <%= f.search_field :author_eq %>
+  <%= f.label :author_eq, "著者" %>
+  <%= f.search_field :author_eq %>
 
-    <%= f.label :circle_eq, "サークル" %>
-    <%= f.search_field :circle_eq %>
+  <%= f.label :circle_eq, "サークル" %>
+  <%= f.search_field :circle_eq %>
 
-    <br>
+  <br>
 
-    <%= f.label :qualify_eq, "対象年齢" %>
-    <%= f.search_field :qualify_eq %>
+  <%= f.label :qualify_eq, "対象年齢" %>
+  <%= f.search_field :qualify_eq %>
 
-    <%= f.label :publication_cont, "発行日" %>
-    <%= f.search_field :publication_cont %>
+  <%= f.label :publication_cont, "発行日" %>
+  <%= f.search_field :publication_cont %>
 
-    <%= f.label :printed_eq, "印刷所" %>
-    <%= f.search_field :printed_eq %>
+  <%= f.label :printed_eq, "印刷所" %>
+  <%= f.search_field :printed_eq %>
 
-    <%= f.label :another_info_eq, "その他情報" %>
-    <%= f.search_field :another_info_eq %>
+  <%= f.label :another_info_eq, "その他情報" %>
+  <%= f.search_field :another_info_eq %>
 
-    <br>
+  <br>
 
-    <%= f.submit "検索" %>
+  <%= f.submit "検索" %>
 <% end %>
 
 <hr>
 
 <% if @magazines.count == 0 %>
-    <h3><strong>見つかりませんでした。</strong></h3>
+  <h3><strong>見つかりませんでした。</strong></h3>
 <% else %>
-    <h3><strong><%= @magazines.count %>冊</strong></h3>
+  <h3><strong><%= @magazines.count %>冊</strong></h3>
 
-    <ul>
-        <% @magazines.each do |magazine| %>
-            <h3><%= link_to magazine.title, magazine_path(magazine.id) %></h3>
-        <% end %>
-    </ul>
+  <ul>
+    <% @magazines.each do |magazine| %>
+      <h3><%= link_to magazine.title, magazine_path(magazine.id) %></h3>
+    <% end %>
+  </ul>
 <% end %>
