@@ -1,0 +1,9 @@
+<h1>サークル一覧</h1>
+
+<h4><%= @circles.count %></h4>
+
+<% @circles.each do |circle| %>
+<p>
+  <%= circle.circle %>
+</p>
+<% end %>

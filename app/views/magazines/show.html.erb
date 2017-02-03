@@ -2,7 +2,7 @@
 
 <!-- 薄い本情報の表示 -->
 <ul>
-  <li>原作 : <%= @magazine.origin %></li><br>
+  <li>原作 : <%= link_to @magazine.origin, origin_path %></li><br>
   <li>作者 : <%= @magazine.author %></li><br>
   <li>サークル : <%= @magazine.circle %></li><br>
   <li>対象年齢 : <%= @magazine.qualify %></li><br>

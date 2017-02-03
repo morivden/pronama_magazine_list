@@ -1,0 +1,9 @@
+<h1>原作一覧</h1>
+
+<h4><%= @origins.count %></h4>
+
+<% @origins.each do |origin| %>
+<p>
+  <%= origin.origin %>
+</p>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>作者一覧</h1>
+
+<h4><%= @authors.count %></h4>
+
+<% @authors.each do |author| %>
+<p>
+  <%= author.author %>
+</p>
+<% end %>

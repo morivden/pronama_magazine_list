@@ -48,6 +48,18 @@ class MagazinesController < ApplicationController
     redirect_to magazines_path
   end
 
+  def origin
+    @origins = Magazine.select(:origin).order(:origin).uniq.sort
+  end
+
+  def author
+    @authors = Magazine.select(:author).order(:author).uniq.sort
+  end
+
+  def circle
+    @circles = Magazine.select(:circle).order(:circle).uniq.sort
+  end
+
   private
 
   def magazine_params
