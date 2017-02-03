@@ -50,14 +50,19 @@ class MagazinesController < ApplicationController
 
   def origin
     @origins = Magazine.select(:origin).order(:origin).uniq.sort
+    # @origins = Magazine.select(:id, :origin).order(:origin).uniq
   end
 
   def author
-    @authors = Magazine.select(:author).order(:author).uniq.sort
+    @authors = Magazine.select(:id, :author).order(:author).uniq.sort
   end
 
   def circle
-    @circles = Magazine.select(:circle).order(:circle).uniq.sort
+    @circles = Magazine.select(:id, :circle).order(:circle).uniq.sort
+  end
+
+  def index_origin
+    @origins = Magazine.where(origin: params[:origin])
   end
 
   private

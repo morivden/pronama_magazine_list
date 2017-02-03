@@ -1,9 +1,7 @@
 <h1>原作一覧</h1>
 
-<h4><%= @origins.count %></h4>
-
 <% @origins.each do |origin| %>
 <p>
-  <%= origin.origin %>
+  <%= link_to origin.origin, controller: 'magazines', action: 'index_origin', origin: origin.origin %>
 </p>
 <% end %>

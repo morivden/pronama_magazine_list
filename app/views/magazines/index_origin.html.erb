@@ -1,0 +1,7 @@
+<h1>原作薄い本一覧</h1>
+
+<% @origins.each do |origin| %>
+<p>
+  <%= link_to origin.title, '#' %>
+</p>
+<% end %>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/origin' => 'magazines#origin'
   get '/author' => 'magazines#author'
   get '/circle' => 'magazines#circle'
+  get '/origin/index' => 'magazines#index_origin'
 
   root 'magazines#title'
 end
