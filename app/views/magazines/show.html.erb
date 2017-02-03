@@ -2,9 +2,12 @@
 
 <!-- 薄い本情報の表示 -->
 <ul>
-  <li>原作 : <%= link_to @magazine.origin, origin_path %></li><br>
-  <li>作者 : <%= @magazine.author %></li><br>
-  <li>サークル : <%= @magazine.circle %></li><br>
+  <li>原作 : <%= link_to @magazine.origin,
+  controller: 'magazines', action: 'index_origin', id: @magazine.id, origin: @magazine.origin %></li><br>
+  <li>作者 : <%= link_to @magazine.author,
+  controller: 'magazines', action: 'index_author', id: @magazine.id, author: @magazine.author %></li><br>
+  <li>サークル : <%= link_to @magazine.circle,
+  controller: 'magazines', action: 'index_circle', id: @magazine.id, circle: @magazine.circle %></li><br>
   <li>対象年齢 : <%= @magazine.qualify %></li><br>
   <li>発行日 : <%= @magazine.publication %></li><br>
   <li>印刷所 : <%= @magazine.printed %></li><br>

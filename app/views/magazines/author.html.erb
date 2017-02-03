@@ -4,6 +4,7 @@
 
 <% @authors.each do |author| %>
 <p>
-  <%= author.author %>
+  <%= link_to author.author,
+  controller: 'magazines', action: 'index_author', id: author.id, author: author.author %>
 </p>
 <% end %>

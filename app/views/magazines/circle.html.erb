@@ -4,6 +4,7 @@
 
 <% @circles.each do |circle| %>
 <p>
-  <%= circle.circle %>
+  <%= link_to circle.circle,
+  controller: 'magazines', action: 'index_circle', id: circle.id, circle: circle.circle %>
 </p>
 <% end %>

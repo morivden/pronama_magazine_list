@@ -1,0 +1,9 @@
+<h1><%= @circles.first.circle %>の薄い本一覧</h1>
+
+<h4><%= @circles.count %>冊</h4>
+
+<% @circles.each do |circle| %>
+<p>
+  <%= link_to circle.title, magazine_path(circle.id) %>
+</p>
+<% end %>

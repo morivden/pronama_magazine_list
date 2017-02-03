@@ -1,0 +1,9 @@
+<h1><%= @authors.first.author %>の薄い本一覧</h1>
+
+<h4><%= @authors.count %>冊</h4>
+
+<% @authors.each do |author| %>
+<p>
+  <%= link_to author.title, magazine_path(author.id) %>
+</p>
+<% end %>

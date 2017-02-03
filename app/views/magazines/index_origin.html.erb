@@ -1,7 +1,9 @@
-<h1>原作薄い本一覧</h1>
+<h1><%= @origins.first.origin %>の薄い本一覧</h1>
+
+<h4><%= @origins.count %>冊</h4>
 
 <% @origins.each do |origin| %>
 <p>
-  <%= link_to origin.title, '#' %>
+  <%= link_to origin.title, magazine_path(origin.id) %>
 </p>
 <% end %>
