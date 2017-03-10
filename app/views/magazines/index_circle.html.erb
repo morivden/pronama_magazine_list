@@ -2,8 +2,10 @@
 
 <h4><%= @circles.count %>冊</h4>
 
-<% @circles.each do |circle| %>
-<p>
-  <%= link_to circle.title, magazine_path(circle.id) %>
-</p>
+<ul>
+  <% @circles.each do |circle| %>
+  <h4>
+    <%= link_to circle.title, magazine_path(circle.id) %>
+  </h4>
+</ul>
 <% end %>

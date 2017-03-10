@@ -2,9 +2,11 @@
 
 <h4><%= @origins.count %></h4>
 
-<% @origins.each do |origin| %>
-<p>
-  <%= link_to origin.origin,
-  controller: 'magazines', action: 'index_origin', id: origin.id, origin: origin.origin %>
-</p>
+<ul>
+  <% @origins.each do |origin| %>
+  <h4>
+    <%= link_to origin.origin,
+    controller: 'magazines', action: 'index_origin', id: origin.id, origin: origin.origin %>
+  </h4>
+</ul>
 <% end %>

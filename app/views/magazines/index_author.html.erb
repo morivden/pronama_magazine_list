@@ -2,8 +2,10 @@
 
 <h4><%= @authors.count %>冊</h4>
 
-<% @authors.each do |author| %>
-<p>
-  <%= link_to author.title, magazine_path(author.id) %>
-</p>
+<ul>
+  <% @authors.each do |author| %>
+  <h4>
+    <%= link_to author.title, magazine_path(author.id) %>
+  </h4>
+</ul>
 <% end %>

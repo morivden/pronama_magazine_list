@@ -2,9 +2,11 @@
 
 <h4><%= @circles.count %></h4>
 
-<% @circles.each do |circle| %>
-<p>
-  <%= link_to circle.circle,
-  controller: 'magazines', action: 'index_circle', id: circle.id, circle: circle.circle %>
-</p>
+<ul>
+  <% @circles.each do |circle| %>
+  <h4>
+    <%= link_to circle.circle,
+    controller: 'magazines', action: 'index_circle', id: circle.id, circle: circle.circle %>
+  </h4>
+</ul>
 <% end %>

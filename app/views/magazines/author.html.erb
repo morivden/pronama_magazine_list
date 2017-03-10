@@ -2,9 +2,11 @@
 
 <h4><%= @authors.count %></h4>
 
-<% @authors.each do |author| %>
-<p>
-  <%= link_to author.author,
-  controller: 'magazines', action: 'index_author', id: author.id, author: author.author %>
-</p>
+<ul>
+  <% @authors.each do |author| %>
+  <h4>
+    <%= link_to author.author,
+    controller: 'magazines', action: 'index_author', id: author.id, author: author.author %>
+  </h4>
+</ul>
 <% end %>
