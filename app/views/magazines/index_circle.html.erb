@@ -4,8 +4,8 @@
 
 <ul>
   <% @circles.each do |circle| %>
-  <h4>
-    <%= link_to circle.title, magazine_path(circle.id) %>
-  </h4>
+    <h4>
+      <%= link_to circle.title, magazine_path(circle.id) %>
+    </h4>
+  <% end %>
 </ul>
-<% end %>

@@ -4,9 +4,9 @@
 
 <ul>
   <% @origins.each do |origin| %>
-  <h4>
-    <%= link_to origin.origin,
-    controller: 'magazines', action: 'index_origin', id: origin.id, origin: origin.origin %>
-  </h4>
+    <h4>
+      <%= link_to origin.origin,
+      controller: 'magazines', action: 'index_origin', id: origin.id, origin: origin.origin %>
+    </h4>
+  <% end %>
 </ul>
-<% end %>

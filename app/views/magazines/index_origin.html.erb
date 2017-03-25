@@ -4,8 +4,8 @@
 
 <ul>
   <% @origins.each do |origin| %>
-  <h4>
-    <%= link_to origin.title, magazine_path(origin.id) %>
-  </h4>
+    <h4>
+      <%= link_to origin.title, magazine_path(origin.id) %>
+    </h4>
+  <% end %>
 </ul>
-<% end %>

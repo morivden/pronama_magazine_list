@@ -4,8 +4,8 @@
 
 <ul>
   <% @authors.each do |author| %>
-  <h4>
-    <%= link_to author.title, magazine_path(author.id) %>
-  </h4>
+    <h4>
+      <%= link_to author.title, magazine_path(author.id) %>
+    </h4>
+  <% end %>
 </ul>
-<% end %>
